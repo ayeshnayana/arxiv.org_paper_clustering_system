@@ -16,3 +16,9 @@ As a physics researcher, I regularly read pre-print articles from arxive.org to 
 In unsupervised learning, the algorithms find patterns in data. Unlike supervised learning, these data used in unsupervised learning do not contain labels to classify them. Therefore, we do not have a specific prediction task in unsupervised learning. 
 
 ### KMeans clustering
+
+In KMeans clustering algorithm finds clusters of samples. The number of clusters (k) needs to be defined. Here we used the KMeans algorithm implemented in the sklearn("scikit-learn). 
+
+The KMeans algorithm initializes a set of k number of clusters randomly. Then it calculates the cluster centroids (mean of each cluster). Each data point gets allocated into the groups when the algorithm progresses by reducing the in-cluster sum of squares.
+
+In other words, KMeans try to allocate each data point to the nearest cluster while keeping the centroids small as possible.
