@@ -42,3 +42,5 @@ Inside the TF-IDF matrix, each article is identified by many features. Each feat
 
 ![download (7)](https://user-images.githubusercontent.com/42178947/185478958-af8a91ab-7602-437c-97fd-5b054df25a85.png)
 
+Figure: The clustered research articles rendered using T-SNE. The articles that belomngs to same cluster have similar color.
+
