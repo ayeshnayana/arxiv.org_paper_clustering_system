@@ -3,13 +3,22 @@ Every day arxiv.org get more than a thousand pre-print articles submitted. Their
 
 As a physics researcher, I regularly read pre-print articles from arxive.org to get updated with the field's state-of-the-art research. However, finding a relevant and interesting article for my line of work was difficult with many submissions. Finding a suitable paper took several hours of my time every day. Because of this, I decided to build a program that clusters similar documents together and visualizes the clustered articles. 
 
- ## The arxiv.org research article clustering system incorporates 
+ # The arxiv.org research article clustering system incorporates 
  
   -Data extraction system from abstracts using web scraping
   
   -Research article clustering system based on KMeans clustering algorithm
   
   -Clustered article visualization system using T-SNE. 
+  
+## Data extraction
+
+We use web scraping techniques to obtain the data from the arxiv.org website. Using the python requests package, we get the HTML data from the "https://arxiv.org/list/hep-{}/recent" URL. Inside the curly brackets, the user must define the specific field. For example, if users wish to obtain phenomenology articles, they should input "ph."
+
+These HTML data are then parsed into a soup using the python bs4 package. For further processing, we scrape the paper links from the soup. 
+
+The scraped paper links are then used to access the main page of each paper on arxiv.org. Then we scrape the content found in the paper abstract. These scraped abstracts are then stored in an array to create a TF-IDF matrix using the TfidfVectorizer python package. The TF-IDF matrix only contains the vital text in each abstract. It omits less relevant words like articles. This TF-IDF matrix feed into the KMeans algorithm implemented using a pipeline for clustering. 
+  
   
 ## KMeans clustering and unsupervised learning
 
@@ -23,10 +32,3 @@ The KMeans algorithm initializes a set of k number of clusters randomly. Then it
 
 In other words, KMeans try to allocate each data point to the nearest cluster while keeping the centroids small as possible.
 
-## Web Scrape
-
-We use web scraping techniques to obtain the data from the arxiv.org website. Using the python requests package, we get the HTML data from the "https://arxiv.org/list/hep-{}/recent" URL. Inside the curly brackets, the user must define the specific field. For example, if users wish to obtain phenomenology articles, they should input "ph."
-
-These HTML data are then parsed into a soup using the python bs4 package. For further processing, we scrape the paper links from the soup. 
-
-The scraped paper links are then used to access the main page of each paper on arxiv.org. Then we scrape the content found in the paper abstract. These scraped abstracts are then stored in an array to create a TF-IDF matrix using the TfidfVectorizer python package. The TF-IDF matrix only contains the vital text in each abstract. It omits less relevant words like articles. This TF-IDF matrix feed into the KMeans algorithm implemented using a pipeline for clustering. 
