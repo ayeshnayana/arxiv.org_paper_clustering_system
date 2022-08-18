@@ -54,5 +54,19 @@ Please refer to the following flow diagram for further details.
 
 ![flow_diagram](https://user-images.githubusercontent.com/42178947/185485973-aa158651-75dc-4c21-8cc8-439f39c3ffbc.jpg)
 
+## Code
 
+The code is comprised of a python notebook. The main packages include:
+
+-pandas
+
+-numpy
+
+-bs4
+
+-requests
+
+-sklearn
+
+-matplotlib
 
