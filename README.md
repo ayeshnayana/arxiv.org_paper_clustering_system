@@ -7,6 +7,6 @@ As a physics researcher, I regularly read pre-print articles from arxive.org to 
  
   -Data extraction system from abstracts using web scraping
   
-  -Research article clustering system based on knn algorithm
+  -Research article clustering system based on KMeans clustering algorithm
   
   -Clustered article visualization system using T-SNE. 
