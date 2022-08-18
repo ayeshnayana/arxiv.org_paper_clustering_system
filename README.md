@@ -22,3 +22,9 @@ In KMeans clustering algorithm finds clusters of samples. The number of clusters
 The KMeans algorithm initializes a set of k number of clusters randomly. Then it calculates the cluster centroids (mean of each cluster). Each data point gets allocated into the groups when the algorithm progresses by reducing the in-cluster sum of squares.
 
 In other words, KMeans try to allocate each data point to the nearest cluster while keeping the centroids small as possible.
+
+## Web Scrape
+
+We use web scraping techniques to obtain the data from the arxiv.org website. Using the python requests package, we get the HTML data from the "https://arxiv.org/list/hep-{}/recent" URL. These HTML data are then parsed into a soup using the python bs4 package. For further processing, we scrape the paper links from the soup. 
+
+The scraped paper links are then used to access the main page of each paper on arxiv.org. Then we scrape the content found in the paper abstract. These scraped abstracts are then stored in an array to create a TF-IDF matrix using the TfidfVectorizer python package. The TF-IDF matrix only contains the vital text in each abstract. It omits less relevant words like articles. This TF-IDF matrix feed into the KMeans algorithm implemented using a pipeline for clustering. 
