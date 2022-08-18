@@ -48,6 +48,8 @@ Figure: The clustered research articles rendered using T-SNE. The articles that 
 
 ## Work in progress
 
+This work is still in progress. The 
+
 ![flow_diagram](https://user-images.githubusercontent.com/42178947/185485973-aa158651-75dc-4c21-8cc8-439f39c3ffbc.jpg)
 
 
