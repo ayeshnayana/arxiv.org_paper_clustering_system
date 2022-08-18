@@ -25,6 +25,7 @@ In other words, KMeans try to allocate each data point to the nearest cluster wh
 
 ## Web Scrape
 
-We use web scraping techniques to obtain the data from the arxiv.org website. Using the python requests package, we get the HTML data from the "https://arxiv.org/list/hep-{}/recent" URL. These HTML data are then parsed into a soup using the python bs4 package. For further processing, we scrape the paper links from the soup. 
+We use web scraping techniques to obtain the data from the arxiv.org website. Using the python requests package, we get the HTML data from the "https://arxiv.org/list/hep-{}/recent" URL. Inside the curly brackets, the user must define the specific field. For example, if users wish to obtain phenomenology articles, they should input "ph."
+These HTML data are then parsed into a soup using the python bs4 package. For further processing, we scrape the paper links from the soup. 
 
 The scraped paper links are then used to access the main page of each paper on arxiv.org. Then we scrape the content found in the paper abstract. These scraped abstracts are then stored in an array to create a TF-IDF matrix using the TfidfVectorizer python package. The TF-IDF matrix only contains the vital text in each abstract. It omits less relevant words like articles. This TF-IDF matrix feed into the KMeans algorithm implemented using a pipeline for clustering. 
