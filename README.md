@@ -35,6 +35,8 @@ In other words, KMeans try to allocate each data point to the nearest cluster wh
 ## Visualization
 
 To visualize the clustered articles, we use the T-SNE algorithm in sklearn. In KMeans, each cluster gets assigned a label. These labels and a list of article names then feed into T-SNE. 
+
 The T-SNE algorithm is a dimensionality reduction algorithm similar to the PCA. 
+
 Inside the TF-IDF matrix, each article is identified by many features. Each feature represents an important word obtained from the abstract. This large dimensionality needs to be reduced to 2 dimensions to visualize them in a 2D plane. Using T-SNE, we reduce the dimensionality of the TF-IDF matrix to two. Then we plot each paper using a scatter plot. Each point on the scatter plot is colored according to the label created during the clustering. The name of each article is then annotated. 
 
