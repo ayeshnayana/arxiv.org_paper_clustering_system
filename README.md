@@ -17,7 +17,7 @@ We use web scraping techniques to obtain the data from the arxiv.org website. Us
 
 These HTML data are then parsed into a soup using the python bs4 package. For further processing, we scrape the paper links from the soup. 
 
-The scraped paper links are then used to access the main page of each paper on arxiv.org. Then we scrape the content found in the paper abstract. These scraped abstracts are then stored in an array to create a TF-IDF matrix using the TfidfVectorizer python package. The TF-IDF matrix only contains the vital text in each abstract. It omits less relevant words like articles. This TF-IDF matrix feed into the KMeans algorithm implemented using a pipeline for clustering. 
+The scraped paper links are then used to access the main page of each paper on arxiv.org. Then we scrape the content found in the paper abstract. These scraped abstracts are then stored in an array to create a TF-IDF matrix using the TfidfVectorizer python package. The TF-IDF matrix only contains the vital text in each abstract. It omits less relevant words like articles, connecting verbs etc. This TF-IDF matrix feed into the KMeans algorithm implemented using a pipeline for clustering. 
   
   
 ## KMeans clustering and unsupervised learning
