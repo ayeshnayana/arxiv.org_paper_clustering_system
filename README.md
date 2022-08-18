@@ -40,3 +40,5 @@ The T-SNE algorithm is a dimensionality reduction algorithm similar to the PCA.
 
 Inside the TF-IDF matrix, each article is identified by many features. Each feature represents an important word obtained from the abstract. This large dimensionality needs to be reduced to 2 dimensions to visualize them in a 2D plane. Using T-SNE, we reduce the dimensionality of the TF-IDF matrix to two. Then we plot each paper using a scatter plot. Each point on the scatter plot is colored according to the label created during the clustering. The name of each article is then annotated. 
 
+![download (7)](https://user-images.githubusercontent.com/42178947/185478958-af8a91ab-7602-437c-97fd-5b054df25a85.png)
+
