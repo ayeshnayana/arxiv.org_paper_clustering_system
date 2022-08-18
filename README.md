@@ -12,3 +12,5 @@ As a physics researcher, I regularly read pre-print articles from arxive.org to 
   -Clustered article visualization system using T-SNE. 
   
 ## KMeans clustering and unsupervised learning
+
+In unsupervised learning, the algorithms find patterns in data. Unlike supervised learning, these data used in unsupervised learning do not contain labels to classify them. Therefore, we do not have a specific prediction task in unsupervised learning. 
