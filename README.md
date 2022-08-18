@@ -48,8 +48,11 @@ Figure: The clustered research articles rendered using T-SNE. The articles that 
 
 ## Work in progress
 
-This work is still in progress. The 
+This work is still in progress. Currently, we only implemented the article clustering system. Next, we plan to implement an article recommender system. Also, as an extension of the executed work, we are implementing a system that generates top terms per cluster.
+
+Please refer to the following flow diagram for further details.
 
 ![flow_diagram](https://user-images.githubusercontent.com/42178947/185485973-aa158651-75dc-4c21-8cc8-439f39c3ffbc.jpg)
+
 
 
